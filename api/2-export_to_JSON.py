@@ -19,4 +19,4 @@ if __name__ == "__main__":
                          for result in request]
 
     with open(argv[1] + ".json", "w") as f:
-        dump(user_dict, f)
+        dump(new_json, f)
