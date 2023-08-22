@@ -15,8 +15,7 @@ if __name__ == "__main__":
     request = get(f"{root_url}/todos?userId={argv[1]}").json()
     new_json[argv[1]] = [{"task": result.get("title"),
                           "completed": result.get("completed"),
-                          "username": result.get("username")}
-                         for result in request]
+                          "username": USERNAME} for result in request]
 
     with open(argv[1] + ".json", "w") as f:
         dump(new_json, f)
