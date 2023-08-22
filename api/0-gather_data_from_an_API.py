@@ -16,7 +16,7 @@ if __name__ == "__main__":
     NUMBER_OF_DONE_TASKS = 0
 
     for result in request:
-        if result.get("completed") == True:
+        if result.get("completed"):
             NUMBER_OF_DONE_TASKS += 1
             TASK_TITLE.append(result.get("title"))
 
